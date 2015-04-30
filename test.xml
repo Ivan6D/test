@@ -6,23 +6,51 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="235">
+      <block type="robot_delay" id="546" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="544">
+            <field name="NUM">500</field>
+          </block>
+        </value>
         <next>
-          <block type="robot_delay" id="416" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="474">
-                <field name="NUM">500</field>
-              </block>
-            </value>
+          <block type="movement_forward" id="235">
             <next>
-              <block type="movement_right" id="246"></block>
+              <block type="robot_delay" id="416" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="543">
+                    <field name="NUM">500</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_right" id="246">
+                    <next>
+                      <block type="robot_delay" id="542" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="474">
+                            <field name="NUM">500</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
             </next>
           </block>
         </next>
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="540"></block>
+      <block type="robot_delay" id="557" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="601">
+            <field name="NUM">500</field>
+          </block>
+        </value>
+        <next>
+          <block type="movement_stop" id="540"></block>
+        </next>
+      </block>
     </next>
   </block>
 </xml>
